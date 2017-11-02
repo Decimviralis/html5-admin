@@ -1,13 +1,14 @@
-let testApp = angular.module('testApp', ['ngRoute','ngResource'])
-    .config(function ($routeProvider) {
-        $routeProvider.when('/',
+var testApp = angular.module('testApp', ["ngRoute"]);
+    testApp.config(function ($routeProvider) {
+        $routeProvider
+            .when('/',
             {
-                templateUrl: '../views/FirstTest.html',
+                templateUrl: 'views/FirstTest.html',
                 controller: 'FirstTestController'
-            });
-        $routeProvider.when('/charts',
+            })
+            .when('/charts',
             {
-               templateUrl: '../views/SecondTest.html',
+               templateUrl: 'views/SecondTest.html',
                controller: 'SecondTestController'
             });
     });
